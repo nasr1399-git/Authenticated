@@ -1,0 +1,18 @@
+{%extends 'base.html'%}
+{% block title %}Login with{% endblock %}
+{% block header %}Login{% endblock %}
+{% block content %}
+    <p>Try
+        <a title="Google Authenticator"
+           </a>
+        now and see how fast and easy it is!</p>
+        {{request.user.is_authenticated}}
+    {% if user.is_authenticated %}
+        <h4 class="color--green-sea">
+            Hi, {{ user.username }}!</h4>
+        <a href="logout"><button class="btn--raised btn--red">Log out</button></a>
+    {% else %}
+        <a href="signup"><button class="btn--raised btn--primary">Sign up</button></a>
+        <a href="login"><button class="btn--raised">Log in</button></a>
+    {% endif %}
+{% endblock %}

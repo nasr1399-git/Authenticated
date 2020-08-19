@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h4>  Sign_up </h4>
+    <form action = '' method = 'post'>
+        {% csrf_token %}
+        {%load bfa%}
+        {%fingerprint_input%}
+
+        <table>
+            {{form.as_table}}
+        </table>
+        <p>    
+        <input type = 'submit' value = 'sign up'>
+        </p>
+    </form>
+    
+    {% for error in errors %}
+        <p class="color--alizarin error">{{ error }}</p>
+    {% endfor %}
+{% endblock %}

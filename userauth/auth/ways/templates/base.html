@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> {%block title%} {%endblock%} </title>
+</head>
+<body>
+    <div class="container--center container--justify g--12" id="container">
+        <div class="g--7 m--2" id="content">
+            <h1>{% block header %}{% endblock %}</h1>
+            <p>{% block p %}{% endblock %}</p>
+            {% block content %}{% endblock %}
+            <br><br>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% load static%}
+{%block title%}  User Create{% endblock %}
+{%block header%} User Create {% endblock %}
+{%block content%}  
+{{user.username}}
+{{username}}
+    <img src="{% static "/images/otp.png" %}" alt="My image">
+    <a href="back"><button type="submit">back</button></a>
+
+{%endblock%}

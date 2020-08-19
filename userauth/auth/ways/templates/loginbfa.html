@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{%block title%} login {%endblock%}
+{% block header%} <h4 class="color--green-sea"> Login </h4>{%endblock%}
+{%block content%} 
+ 
+  <form action =""  method ="POST">
+   {% csrf_token %}
+   <table>
+      {{form.as_table}}
+    </table>
+   {% load bfa %}
+   {% fingerprint_input %}
+   <input type="submit" value="Login">
+   {% for error in errors %}
+        <p class="color--alizarin error">{{ error }}</p>
+    {% endfor %}
+
+{%endblock%}

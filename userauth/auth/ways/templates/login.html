@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+
+{% block content %}
+
+    <h4>  Log in </h4>
+
+    <form action ='' method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        {% load bfa %}
+            {% fingerprint_input %}
+        <input type="submit" value="log in ">
+    </form>
+
+{% endblock %}

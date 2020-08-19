@@ -1,0 +1,8 @@
+asgiref==3.2.3
+bfa==1.2.1
+Django==3.0.2
+psycopg2==2.8.4
+psycopg2-binary==2.8.4
+pytz==2019.3
+sqlparse==0.3.0
+Werkzeug==0.16.0

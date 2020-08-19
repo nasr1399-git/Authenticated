@@ -1,0 +1,5 @@
+adium-theme-ubuntu==0.3.4
+psycopg2==2.8.4
+psycopg2-binary==2.8.4
+pysqlite==2.8.3
+unity-lens-photos==1.0
