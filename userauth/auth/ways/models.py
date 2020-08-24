@@ -53,6 +53,3 @@ def user_login_failed_callback(request,user, **kwargs):
     ip_add = request.META.get('REMOTE_ADDR')
     auditentry.objects.create(user_name = user , ip = ip_add , action = 'login_failed' , time = datetime.now())
 
-#@receiver(user_login_failed)
-#def user_login_failed_callback(sender, credentials, **kwargs):
-#    AuditEntry.objects.create(action='user_login_failed', username=credentials.get('username', None))

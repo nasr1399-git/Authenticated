@@ -58,15 +58,11 @@ def log_in(request):
             print(cd['login_type'])
             L_type = cd['login_type']
             if L_type == 'bfa':
-                #loginBFA(request)
-                #return render(request,'loginbfa.html',{'form':BfaForm})
                 return redirect('bfa')
             else :
-                #loginOTP(request)
                 return redirect('otp')
         else:
             errors.append('This Form is not valid')
-            #return HttpResponse('Is not Valid')
     else :
         form = LoginForm()
     return render(request,'login.html',{'form':form,'errors':errors})        
@@ -103,8 +99,6 @@ def loginOTP(request):
                 errors.append('One Time Password is wrong ')
             except ObjectDoesNotExist:
                 errors.append('This User does not exist')
-        #else:
-        #    return HttpResponse('Form is not valid')
     else:
         form = OtpForm()
     return render(request,'loginotp.html',{'form':form , 'errors':errors})
@@ -139,8 +133,6 @@ def loginBFA(request):
                 user_login_failed_callback(request,user1)
             except ValueError:
                 errors.append('Bad Fingerprint')
-        #else:
-            #return HttpResponse('The Form is not valid')
     else:
         form = BfaForm
     return render(request,'loginbfa.html',{'form':form , 'errors':errors })    
